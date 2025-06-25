@@ -29,12 +29,13 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: none;
+    width: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    align-items: left;
-    padding: 1rem 20px;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 .logo img {
@@ -47,6 +48,8 @@ body {
     list-style: none;
     gap: 2rem;
     align-items: center;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .nav-menu a {
@@ -161,109 +164,151 @@ body {
 /* Hero Section */
 /* Hero Section - Updated to move text to the left */
 /* Hero Section - Updated to move text to the left */
+/* Hero Section - UPDATED with new file path */
 .hero {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    /* The URL has been updated to the new file path */
+    background: linear-gradient(to right, rgba(30, 41, 59, 0.95) 25%, rgba(30, 41, 59, 0.6) 50%, rgba(30, 41, 59, 0) 75%, transparent 100%), url('Images/RawPoster.PNG');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 120px 0 80px;
     margin-top: 70px;
 }
 
+
+/* Enhanced hero content positioning - REMOVE ALL EMPTY SPACE */
 .hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    /* UPDATED: Reduced left padding to shift content left */
-    padding: 0 20px 0 0;
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Text gets twice as much space as the image */
-    gap: 4rem;
-    align-items: center;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
 }
 
+/* Move text specifically to the left and make it use more space */
+.hero-text {
+    width: 100%;
+    max-width: none;
+}
+
+/* Enhanced title styling - BIGGER SINCE WE HAVE MORE SPACE */
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    width: 100%;
 }
 
+/* Enhanced subtitle - BIGGER TOO */
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
 }
 
+/* Enhanced detail items with glassmorphism - SPREAD OUT */
 .hero-details {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .detail-item {
     display: flex;
-    align-items: center; /* Fixed from 'left' to 'center' */
+    align-items: center;
     gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
 }
 
-.icon {
-    font-size: 1.2rem;
+.detail-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
 }
 
+/* Enhanced buttons - LEFT ALIGNED TO USE SPACE */
 .hero-buttons {
     display: flex;
+    justify-content: flex-start;
     gap: 1rem;
+    width: 100%;
+    margin-left: 0;
 }
 
+/* Enhanced primary button */
 .btn-primary {
-    background: #005A9C;
+    background: linear-gradient(135deg, #005A9C, #0074d9);
     color: white;
     border: none;
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: 25px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 30px rgba(0, 90, 156, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
 }
 
 .btn-primary:hover {
-    background: #b91c1c;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #004080, #005A9C);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 90, 156, 0.4);
 }
 
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Enhanced secondary button */
 .btn-secondary {
     background: transparent;
     color: white;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: 25px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #1e293b;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-/* Responsive updates */
-@media (max-width: 768px) {
-    .hero-content,
-    .hero-content-alt,
-    .hero-content-left-heavy {
-        grid-template-columns: 1fr;
-        text-align: left;
-        /* On smaller screens, you might want to add back some left padding */
-        padding: 0 20px;
-    }
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    transform: translateY(-3px);
 }
 
 /* About Section */
@@ -282,7 +327,7 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
     align-items: center;
 }
@@ -774,7 +819,8 @@ body {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Responsive Design */
+/* RESPONSIVE DESIGN REMOVED - COMMENTING OUT ALL MEDIA QUERIES */
+/*
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -894,4 +940,38 @@ body {
         padding: 0.75rem 1.5rem;
         font-size: 0.9rem;
     }
+}
+*/
+
+/* FIXED LAYOUT - PREVENT AUTO-RESIZING */
+html {
+    min-width: 1200px;
+}
+
+body {
+    min-width: 1200px;
+    overflow-x: auto;
+}
+
+/* FORCE FIXED GRID LAYOUTS */
+.hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.about-content {
+    grid-template-columns: 1fr 1fr !important;
+}
+
+.venue-content {
+    grid-template-columns: 1fr 1fr !important;
+}
+
+.stats {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.pricing-tiers {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
 }
