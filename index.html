@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <title> Disaster Law Symposium </title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -17,19 +18,9 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="about.html" class="dropbtn">About <span class="dropdown-arrow">▼</span></a>
-                        <div class="dropdown-content">
-                            <a href="about.html">Overview</a>
-                            <a href="pricing.html">Pricing</a>
-                            <a href="why-attend.html">Why Attend</a>
-                            <a href="faq.html">FAQ</a>
-                        </div>
-                    </li>
                     <li><a href="agenda.html">Agenda</a></li>
-                    <li><a href="speakers.html">Speakers</a></li>
                     <li><a href="venue.html">Venue</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
                     <li><a href="register.html" class="register-btn">Register</a></li>
                 </ul>
                 <div class="hamburger">
@@ -50,20 +41,18 @@
                 and Community in Emergency Management</p>
                 <div class="hero-details">
                     <div class="detail-item">
-                        
-                        <span>Tusday, November 5th, 2025</span>
+                        <span>Wednesday, November 5th, 2025</span>
                     </div>
                     <div class="detail-item">
                         <a href="https://maps.app.goo.gl/atELWYvjC95wmGvf9" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">Brooklyn Law School</a>
-                        </span>
                     </div>
                 </div>
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="scrollToRegister()">Register Now</button>
+                    <button class="btn-primary" onclick="window.location.href='register.html'">Register Now</button>
                 </div>
             </div>
             <div class="hero-image">
-                <!-- <img src="Images/DisasterLawSymposium03_1985743749.jpg" alt="Conference Image">-->
+                <img src="Images/DisasterLawSymposium03_1985743749.jpg" alt="Disaster Law Symposium conference photo">
             </div>
         </div>
     </section>
@@ -71,14 +60,14 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About the Conference</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>This premier professional conference brings together thought leaders, innovators, and practitioners for an intensive three-day program designed to advance knowledge and foster meaningful connections in our industry.</p>
+                    <h2>Uniting Leaders in Emergency Management</h2>
+                    <p>Join <strong>500+</strong> professionals, innovators, and decision-makers to tackle the most pressing challenges in disaster law. Collaborate with peers, learn from 50+ expert speakers, and gain actionable strategies to build a more resilient and compliant community. This three-day event is your opportunity to connect, share, and shape the future of emergency management.</p>
                     <div class="stats">
                         <div class="stat">
                             <h3>500+</h3>
-                            <p>Attendees Expected</p>
+                            <p>Attendees</p>
                         </div>
                         <div class="stat">
                             <h3>50+</h3>
@@ -90,195 +79,8 @@
                         </div>
                     </div>
                 </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Agenda Section -->
-    <section id="agenda" class="agenda">
-        <div class="container">
-          <h2>Conference Agenda</h2>
-          <!--<div class="agenda-tabs">
-              <button class="tab-btn active" data-day="day1">Day 1</button>
-                <button class="tab-btn" data-day="day2">Day 2</button>
-                <button class="tab-btn" data-day="day3">Day 3</button>-->
-            </div>
-            
-            <div class="agenda-content">
-                <div class="day-schedule active" id="day1">
-                    <div class="schedule-item">
-                        <div class="time">9:00 AM</div>
-                        <div class="session">
-                            <h4>Opening Keynote</h4>
-                            <p>Welcome address and industry overview</p>
-                            <span class="speaker">Dr. Jane Smith</span>
-                        </div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="time">10:30 AM</div>
-                        <div class="session">
-                            <h4>Panel Discussion: Future Trends</h4>
-                            <p>Industry experts discuss emerging trends and challenges</p>
-                            <span class="speaker">Multiple Speakers</span>
-                        </div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="time">2:00 PM</div>
-                        <div class="session">
-                            <h4>Workshop: Best Practices</h4>
-                            <p>Hands-on workshop covering industry best practices</p>
-                            <span class="speaker">John Doe</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="day-schedule" id="day2">
-                    <div class="schedule-item">
-                        <div class="time">9:00 AM</div>
-                        <div class="session">
-                            <h4>Technical Deep Dive</h4>
-                            <p>Advanced technical concepts and implementations</p>
-                            <span class="speaker">Sarah Johnson</span>
-                        </div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="time">11:00 AM</div>
-                        <div class="session">
-                            <h4>Case Studies</h4>
-                            <p>Real-world applications and success stories</p>
-                            <span class="speaker">Mike Chen</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="day-schedule" id="day3">
-                    <div class="schedule-item">
-                        <div class="time">9:00 AM</div>
-                        <div class="session">
-                            <h4>Innovation Showcase</h4>
-                            <p>Latest innovations and technological advances</p>
-                            <span class="speaker">Various Presenters</span>
-                        </div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="time">3:00 PM</div>
-                        <div class="session">
-                            <h4>Closing Remarks</h4>
-                            <p>Conference wrap-up and next steps</p>
-                            <span class="speaker">Conference Chair</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Speakers Section -->
-    <section id="speakers" class="speakers">
-        <div class="container">
-            <h2>Featured Speakers</h2>
-            <div class="speakers-grid">
-                <div class="speaker-card">
-                    <img src="/api/placeholder/200/200" alt="tbd">
-                    <h4>TBD</h4>
-                    <p class="title">TBD</p>
-                    <p class="company">TBD</p>
-                </div>
-                <div class="speaker-card">
-                    <img src="/api/placeholder/200/200" alt="TBD">
-                    <h4>TBD</h4>
-                    <p class="title">TBD</p>
-                    <p class="company">TBD</p>
-                </div>
-                <div class="speaker-card">
-                    <img src="/api/placeholder/200/200" alt="TBD">
-                    <h4>TBD</h4>
-                    <p class="title">TBD</p>
-                    <p class="company">TBD</p>
-                </div>
-                <div class="speaker-card">
-                    <img src="/api/placeholder/200/200" alt="TBD">
-                    <h4>TBD</h4>
-                    <p class="title">TBD</p>
-                    <p class="company">TBD</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Venue Section -->
-    <section id="venue" class="venue">
-        <div class="container">
-            <h2>Venue Information</h2>
-            <div class="venue-content">
-                <div class="venue-details">
-                    <h3>Convention Center</h3>
-                    <p class="address">123 Conference Ave, New York, NY 10001</p>
-                    <div class="venue-info">
-                        <h4>Getting There</h4>
-                        <p>The venue is easily accessible by public transportation and offers parking facilities for attendees.</p>
-                        
-                        <h4>Accommodations</h4>
-                        <p>Special rates available at nearby hotels. Contact us for booking information.</p>
-                        
-                        <h4>Accessibility</h4>
-                        <p>The venue is fully accessible with wheelchair access and accommodations for all attendees.</p>
-                    </div>
-                </div>
-                <div class="venue-map">
-                    <div class="map-placeholder">
-                        <img src="/api/placeholder/400/300" alt="Venue Map">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="register" class="registration">
-        <div class="container">
-            <h2>Register for the Conference</h2>
-            <div class="registration-content">
-                <div class="pricing-tiers">
-                    <div class="pricing-card">
-                        <!--<h3>Early Bird</h3>
-                        <div class="price">$299</div>
-                        <p class="deadline">Until February 15, 2025</p>
-                        <ul>
-                            <li>All sessions access</li>
-                            <li>Conference materials</li>
-                            <li>Networking events</li>
-                            <li>Lunch included</li>
-                        </ul>
-                        <button class="btn-primary" onclick="openRegistration('early-bird')">Register</button>
-                    </div>
-                    
-                    <div class="pricing-card featured">
-                        <h3>Standard</h3>
-                        <div class="price">$399</div>
-                        <p class="deadline">Until March 1, 2025</p>
-                        <ul>
-                            <li>All sessions access</li>
-                            <li>Conference materials</li>
-                            <li>Networking events</li>
-                            <li>Lunch included</li>
-                            <li>Welcome reception</li>
-                        </ul>
-                        <button class="btn-primary" onclick="openRegistration('standard')">Register</button>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h3>Late Registration</h3>
-                        <div class="price">$499</div>
-                        <p class="deadline">After March 1, 2025</p>
-                        <ul>
-                            <li>All sessions access</li>
-                            <li>Conference materials</li>
-                            <li>Networking events</li>
-                        </ul>-->
-                        <button class="btn-primary" onclick="openRegistration('late')">Register</button>
-                    </div>
+                <div class="about-image">
+                    <img src="Images/brooklyn-law-school.jpg" alt="Brooklyn Law School building during a previous conference">
                 </div>
             </div>
         </div>
@@ -297,10 +99,11 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#agenda">Agenda</a></li>
-                        <li><a href="#speakers">Speakers</a></li>
-                        <li><a href="#register">Register</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="venue.html">Venue</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                        <li><a href="register.html">Register</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -317,45 +120,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Registration Modal -->
-    <div id="registrationModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Conference Registration</h3>
-            <form id="registrationForm">
-                <div class="form-group">
-                    <label for="firstName">First Name *</label>
-                    <input type="text" id="firstName" name="firstName" required>
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name *</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="organization">Organization</label>
-                    <input type="text" id="organization" name="organization">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-              <div class="form-group">
-                    <label for="registrationType">Registration Type</label>
-                    <select id="registrationType" name="registrationType">
-                        <option value="early-bird">Early Bird - $299</option>
-                        <option value="standard">Standard - $399</option>
-                        <option value="late">Late Registration - $499</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-primary">Complete Registration</button>
-            </form>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

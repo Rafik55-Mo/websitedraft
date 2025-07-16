@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Register - Disaster Law Symposium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="Images/NYCEM_LOGO_black.png" alt="Organization Logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="venue.html">Venue</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="register.html" class="register-btn">Register</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <section id="register" class="registration">
+        <div class="container">
+            <h2>Register for the Conference</h2>
+            <div class="registration-content">
+                <div class="registration-form-wrapper">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="organization">Organization (optional)</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="attendanceType">Attendance Type *</label>
+                            <select id="attendanceType" name="attendanceType" required>
+                                <option value="">Select an option</option>
+                                <option value="In Person">In Person</option>
+                                <option value="Remote">Remote</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Complete Registration</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p>info@disasterlawsymposium.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Phone</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Address</h4>
+                            <p>250 Joralemon St, Brooklyn, NY 11201</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p>Email: info@disasterlawsymposium.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Address: 250 Joralemon St, Brooklyn, NY 11201</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="venue.html">Venue</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; NYCEM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
